@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<template>
+        <h1>Food</h1>
+        <food-item/>
+        <food-item/>
+        <food-item/>
+</template>
+
+<template>
+   <div v-on:click='countClicks'>
+        <h2>{{ name }}</h2>
+        <p>{{ message }}</p>
+        <p id="red">Click aqui</p>
+    </div>
+</template>
+
+      <script>
+        export default {
+          data() {
+            return {
+              name: 'Apples',
+              message: 'I like apples',
+              clicks: 0
+            }
+          }
+        };
+
+        </script>
+
+        <script>
+        methods: {
+          countClicks(); {
+              this.clicks++;
+          }
+        };
+        </script>
+        
+        <style>
+
+        #red {
+          font-weight: bold;
+          color: rgb(red, green, blue)
+        #app > div {
+    border: dashed black 1px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgreen;
+  }
+  #app > div:hover {
+    cursor: pointer;
+  }
+        };
+      </style>
+    
+</body>
+</html>
