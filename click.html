@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evento click</title>
+<script type="text/javascript" 
+src="https://code.jquery.com/jquery-3.6.4.js"></script>
+</head>
+<body>
+<ul>
+<li class="item_lista">Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+<li>Item 4</li>
+<li>Item 5</li>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae saepe quas quo voluptatem, alias amet, autem atque ullam officia quibusdam libero dolore architecto non repellendus ad accusamus iste nostrum nulla!</p>
+</ul>
+<script type="text/javascript">
+$('ul li').click(function () {
+console.log('Conteúdo do item da lista: ' + $(this).text());
+});
+//Adicionando, dinamicamente, um novo elemento <li> à lista
+$('ul').append('<li>Item 6</li>');
+
+//Removendo o item 1 da lista
+//$('li.item_lista').remove();
+
+//Removendo o paragrafo da página
+$('p').eq(0).remove();
+</script>
+</body>
+</html>
